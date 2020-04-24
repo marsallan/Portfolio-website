@@ -1,0 +1,36 @@
+@mixin transition($timing, $timing-function) {
+    -webkit-transition: $timing;
+    -moz-transition: $timing;
+    -o-transition: $timing;
+    -ms-transition: $timing;
+    transition: $timing;
+    -webkit-transition-timing-function: $timing-function;
+    -moz-transition-timing-function: $timing-function;
+    -o-transition-timing-function: $timing-function;
+    -ms-transition-timing-function: $timing-function;
+    transition-timing-function: $timing-function;
+}
+
+;
+
+@mixin flex($flex, $flow, $align, $justify) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: $flex;
+    flex-flow: $flow;
+    -ms-flex-flow: $flow;
+    -webkit-box-align: $align;
+    -ms-flex-align: $align;
+    align-items: $align;
+    -webkit-box-pack: $justify;
+    -ms-flex-pack: $justify;
+    justify-content: $justify;
+}
+
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
